@@ -4,8 +4,8 @@
 
 emishows database 🎭💾
 
-[![Testing docker build](https://github.com/radio-aktywne/emishows-db/actions/workflows/docker-build.yml/badge.svg)](https://github.com/radio-aktywne/emishows-db/actions/workflows/docker-build.yml)
-[![Deploying docs](https://github.com/radio-aktywne/emishows-db/actions/workflows/docs.yml/badge.svg)](https://github.com/radio-aktywne/emishows-db/actions/workflows/docs.yml)
+[![Build](https://github.com/radio-aktywne/emishows-db/actions/workflows/build.yaml/badge.svg)](https://github.com/radio-aktywne/emishows-db/actions/workflows/build.yaml)
+[![Docs](https://github.com/radio-aktywne/emishows-db/actions/workflows/docs.yaml/badge.svg)](https://github.com/radio-aktywne/emishows-db/actions/workflows/docs.yaml)
 
 </div>
 

@@ -4,8 +4,8 @@
 
 emishows database 🎭💾
 
-[![Testing docker build](https://github.com/radio-aktywne/emishows-db/actions/workflows/docker-build.yml/badge.svg)](https://github.com/radio-aktywne/emishows-db/actions/workflows/docker-build.yml)
-[![Deploying docs](https://github.com/radio-aktywne/emishows-db/actions/workflows/docs.yml/badge.svg)](https://github.com/radio-aktywne/emishows-db/actions/workflows/docs.yml)
+[![Build](https://github.com/radio-aktywne/emishows-db/actions/workflows/build.yaml/badge.svg)](https://github.com/radio-aktywne/emishows-db/actions/workflows/build.yaml)
+[![Docs](https://github.com/radio-aktywne/emishows-db/actions/workflows/docs.yaml/badge.svg)](https://github.com/radio-aktywne/emishows-db/actions/workflows/docs.yaml)
 
 </div>
 
@@ -13,8 +13,9 @@ emishows database 🎭💾
 
 This `README` provides info about the development process.
 
-For more info about `emishows-db` itself see `emishows-db/README.md`
-or [docs](https://radio-aktywne.github.io/emishows-db).
+For more info about `emishows-db` itself see
+[package `README`](emishows-db/README.md) or
+[docs](https://radio-aktywne.github.io/emishows-db).
 
 ## Quickstart
 
