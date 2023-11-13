@@ -1,0 +1,15 @@
+---
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 0.4.1
+_src_path: gh:radio-aktywne/template-app-generic
+accountname: radio-aktywne
+appname: emishows-db
+description: Emission shows database 🎭💾
+docs: true
+docsurl: https://radio-aktywne.github.io/app-emishows-db
+envprefix: EMISHOWS_DB
+imagename: apps/emishows-db
+registry: true
+releases: true
+reponame: app-emishows-db
+repourl: https://github.com/radio-aktywne/app-emishows-db

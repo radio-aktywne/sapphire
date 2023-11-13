@@ -1,2 +1,0 @@
-CREATE USER IF NOT EXISTS "emishows";
-ALTER USER "emishows" WITH PASSWORD "${EMISHOWS_DB_PASSWORD:-password}";
