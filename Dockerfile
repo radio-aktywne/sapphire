@@ -1,23 +1,50 @@
-ARG COCKROACH_IMAGE_TAG=v21.2.7
+# Use generic base image with Nix installed
+FROM nixos/nix:2.18.1 AS env
 
-FROM cockroachdb/cockroach:$COCKROACH_IMAGE_TAG
+# Configure Nix
+RUN echo "extra-experimental-features = nix-command flakes" >> /etc/nix/nix.conf
 
-RUN microdnf update -y \
-    && microdnf install findutils -y \
-    && rm -rf /var/cache/yum
+# Set working directory to something other than root
+WORKDIR /env/
 
-WORKDIR /app
+# Copy Nix files
+COPY flake.lock *.nix ./
 
-COPY ./emishows-db/init/ ./init/
-COPY ./emishows-db/start.sh ./start.sh
-RUN chmod +x ./start.sh
+# Copy env script
+COPY ./scripts/env.sh ./scripts/env.sh
 
-ENV EMISHOWS_DB_PORT=34000 \
-    EMISHOWS_DB_ADMIN_PORT=34001 \
-    EMISHOWS_DB_PASSWORD=password
+# Build runtime shell closure and activation script
+RUN \
+    # Mount cached store paths
+    --mount=type=cache,target=/nix-store-cache \
+    # Mount Nix evaluation cache
+    --mount=type=cache,target=/root/.cache/nix \
+    ./scripts/env.sh runtime ./build /nix-store-cache
 
-EXPOSE 34000
-EXPOSE 34001
+# Ubuntu is probably the safest choice for a runtime container right now
+FROM ubuntu:23.10
 
-ENTRYPOINT ["./start.sh"]
+# Use bash as default shell
+SHELL ["/bin/bash", "-c"]
+
+# Copy runtime shell closure and activation script
+COPY --from=env /env/build/closure/ /nix/store/
+COPY --from=env /env/build/activate /env/activate
+
+# Set working directory to something other than root
+WORKDIR /app/
+
+# Create app user
+RUN useradd --create-home app
+
+# Setup entrypoint for RUN commands
+COPY ./scripts/shell.sh ./scripts/shell.sh
+SHELL ["./scripts/shell.sh"]
+
+# Copy source
+COPY ./src/ ./src/
+
+# Setup main entrypoint
+COPY ./scripts/entrypoint.sh ./scripts/entrypoint.sh
+ENTRYPOINT ["./scripts/entrypoint.sh", "./src/start.sh"]
 CMD []
