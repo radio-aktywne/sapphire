@@ -1,6 +1,7 @@
 #!/bin/sh
 
 # Configuration
+host="${EMISHOWS_DB_HOST:-0.0.0.0}"
 sqlport="${EMISHOWS_DB_SQL_PORT:-34000}"
 httpport="${EMISHOWS_DB_HTTP_PORT:-34001}"
 rpcport="${EMISHOWS_DB_RPC_PORT:-34002}"
@@ -8,11 +9,11 @@ rpcport="${EMISHOWS_DB_RPC_PORT:-34002}"
 retries=30
 interval=1
 
-datadir=data
-certsdir="${datadir}/certs"
-storedir="${datadir}/store"
+datadir=data/
+certsdir="${datadir}/certs/"
+storedir="${datadir}/store/"
 
-tmpinit=$(mktemp --suffix=.sql --tmpdir=/tmp)
+tmpinit=$(mktemp --suffix=.sql --tmpdir=/tmp/)
 
 # Make sure the directories exists
 mkdir --parents "${datadir}" "${certsdir}" "${storedir}"
@@ -27,11 +28,11 @@ rm --force "${certsdir:?}"/*
 cockroachdb \
 	connect \
 	init \
-	--sql-addr="0.0.0.0:${sqlport}" \
+	--sql-addr="${host}:${sqlport}" \
 	--advertise-sql-addr="localhost:${sqlport}" \
-	--http-addr="0.0.0.0:${httpport}" \
+	--http-addr="${host}:${httpport}" \
 	--advertise-http-addr="localhost:${httpport}" \
-	--listen-addr="0.0.0.0:${rpcport}" \
+	--listen-addr="${host}:${rpcport}" \
 	--advertise-addr="localhost:${rpcport}" \
 	--certs-dir="${certsdir}" \
 	--single-node \
@@ -48,11 +49,11 @@ cockroachdb \
 # Start CockroachDB in the background
 cockroachdb \
 	start-single-node \
-	--sql-addr="0.0.0.0:${sqlport}" \
+	--sql-addr="${host}:${sqlport}" \
 	--advertise-sql-addr="localhost:${sqlport}" \
-	--http-addr="0.0.0.0:${httpport}" \
+	--http-addr="${host}:${httpport}" \
 	--advertise-http-addr="localhost:${httpport}" \
-	--listen-addr="0.0.0.0:${rpcport}" \
+	--listen-addr="${host}:${rpcport}" \
 	--advertise-addr="localhost:${rpcport}" \
 	--certs-dir="${certsdir}" \
 	--accept-sql-without-tls \
@@ -95,4 +96,4 @@ echo 'Setup complete!'
 wait
 
 # Cleanup
-rm -rf "${tmpinit}"
+rm --force "${tmpinit}"
