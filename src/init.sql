@@ -11,8 +11,13 @@ ALTER USER "user"
 WITH
   PASSWORD '${EMISHOWS_DB_PASSWORD:-password}';
 
+-- Grant create database privileges to the main user
+ALTER USER "user"
+WITH
+  CREATEDB;
+
 -- Create the database
 CREATE DATABASE IF NOT EXISTS "database";
 
--- Grant all privileges to the main user
+-- Grant all privileges to the main user on the database
 GRANT ALL ON DATABASE "database" TO "user";
