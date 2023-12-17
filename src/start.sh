@@ -13,7 +13,7 @@ datadir=data/
 certsdir="${datadir}/certs/"
 storedir="${datadir}/store/"
 
-tmpinit=$(mktemp --suffix=.sql --tmpdir=/tmp/)
+tmpinit=$(mktemp --suffix=.sql)
 
 # Make sure the directories exists
 mkdir --parents "${datadir}" "${certsdir}" "${storedir}"
