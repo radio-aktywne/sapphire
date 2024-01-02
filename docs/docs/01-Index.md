@@ -3,7 +3,7 @@ slug: /
 title: Index
 ---
 
-# emishows-db app
+# emishows-db database
 
 Emission shows database 🎭💾
 

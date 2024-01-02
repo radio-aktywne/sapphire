@@ -2,10 +2,10 @@ import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import { themes } from "prism-react-renderer";
 
-const url = new URL("https://radio-aktywne.github.io/app-emishows-db");
+const url = new URL("https://radio-aktywne.github.io/database-emishows-db");
 
 const config: Config = {
-  title: "emishows-db app docs",
+  title: "emishows-db database docs",
   favicon: "favicon.svg?v=1",
 
   url: `${url.protocol}//${url.host}`,
@@ -41,14 +41,14 @@ const config: Config = {
 
   themeConfig: {
     navbar: {
-      title: "emishows-db app docs",
+      title: "emishows-db database docs",
       logo: {
-        alt: "emishows-db app docs logo",
+        alt: "emishows-db database docs logo",
         src: "logo.svg?v=1",
       },
       items: [
         {
-          href: "https://github.com/radio-aktywne/app-emishows-db",
+          href: "https://github.com/radio-aktywne/database-emishows-db",
           position: "right",
           className: "header-github-link",
           "aria-label": "GitHub repository",
