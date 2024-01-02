@@ -3,7 +3,6 @@ services:
     build:
       context: ./
       network: host
-    network_mode: host
     environment:
       - "EMISHOWS_DB_HOST=${EMISHOWS_DB_HOST:-0.0.0.0}"
       - "EMISHOWS_DB_SQL_PORT=${EMISHOWS_DB_SQL_PORT:-34000}"
@@ -11,8 +10,9 @@ services:
       - "EMISHOWS_DB_RPC_PORT=${EMISHOWS_DB_RPC_PORT:-34002}"
       - "EMISHOWS_DB_ROOT_PASSWORD=${EMISHOWS_DB_ROOT_PASSWORD:-password}"
       - "EMISHOWS_DB_PASSWORD=${EMISHOWS_DB_PASSWORD:-password}"
+    network_mode: host
     volumes:
-      - data:/app/data/
+      - data:/database/data/
 
 volumes:
   data: {}

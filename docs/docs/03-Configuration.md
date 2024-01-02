@@ -5,11 +5,11 @@ title: Configuration
 
 ## Environment variables
 
-You can configure the app at runtime using various environment variables:
+You can configure the database at runtime using various environment variables:
 
 - `EMISHOWS_DB_HOST` -
   host to listen for connections on
-  (default: `34000`)
+  (default: `0.0.0.0`)
 - `EMISHOWS_DB_SQL_PORT` -
   port to listen for SQL connections on
   (default: `34000`)
