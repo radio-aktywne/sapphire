@@ -11,6 +11,7 @@ services:
       - "EMISHOWS_DB__CREDENTIALS__ROOT__PASSWORD=${EMISHOWS_DB__CREDENTIALS__ROOT__PASSWORD:-password}"
       - "EMISHOWS_DB__CREDENTIALS__USER__PASSWORD=${EMISHOWS_DB__CREDENTIALS__USER__PASSWORD:-password}"
     network_mode: host
+    privileged: true
     volumes:
       - data:/database/data/
 
