@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # Configuration
-host="${EMISHOWS_DB_HOST:-0.0.0.0}"
-sqlport="${EMISHOWS_DB_SQL_PORT:-34000}"
-httpport="${EMISHOWS_DB_HTTP_PORT:-34001}"
-rpcport="${EMISHOWS_DB_RPC_PORT:-34002}"
+host="${EMISHOWS_DB__SERVER__HOST:-0.0.0.0}"
+sqlport="${EMISHOWS_DB__SERVER__PORTS__SQL:-34000}"
+httpport="${EMISHOWS_DB__SERVER__PORTS__HTTP:-34001}"
+rpcport="${EMISHOWS_DB__SERVER__PORTS__RPC:-34002}"
 
 retries=30
 interval=1
