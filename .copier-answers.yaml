@@ -2,16 +2,16 @@
 _commit: 0.4.0
 _src_path: gh:radio-aktywne/template-database-cockroach
 accountname: radio-aktywne
-databasename: emishows-db
+databasename: datashows
 description: Emission shows database 🎭💾
 docs: true
-docsurl: https://radio-aktywne.github.io/database-emishows-db
-envprefix: EMISHOWS_DB
+docsurl: https://radio-aktywne.github.io/database-datashows
+envprefix: DATASHOWS
 httpport: 34001
-imagename: databases/emishows-db
+imagename: databases/datashows
 registry: true
 releases: true
-reponame: database-emishows-db
-repourl: https://github.com/radio-aktywne/database-emishows-db
+reponame: database-datashows
+repourl: https://github.com/radio-aktywne/database-datashows
 rpcport: 34002
 sqlport: 34000
