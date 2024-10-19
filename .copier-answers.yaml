@@ -2,16 +2,16 @@
 _commit: 0.5.0
 _src_path: gh:radio-aktywne/template-database-cockroach
 accountname: radio-aktywne
-databasename: datashows
+databasename: sapphire
 description: Broadcast shows data 🎭
 docs: true
-docsurl: https://radio-aktywne.github.io/datashows
-envprefix: DATASHOWS
+docsurl: https://radio-aktywne.github.io/sapphire
+envprefix: SAPPHIRE
 httpport: 34001
-imagename: databases/datashows
+imagename: databases/sapphire
 registry: true
 releases: true
-reponame: datashows
-repourl: https://github.com/radio-aktywne/datashows
+reponame: sapphire
+repourl: https://github.com/radio-aktywne/sapphire
 rpcport: 34002
 sqlport: 34000
