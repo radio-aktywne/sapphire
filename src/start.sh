@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # Configuration
-host="${DATASHOWS__SERVER__HOST:-0.0.0.0}"
-sqlport="${DATASHOWS__SERVER__PORTS__SQL:-34000}"
-httpport="${DATASHOWS__SERVER__PORTS__HTTP:-34001}"
-rpcport="${DATASHOWS__SERVER__PORTS__RPC:-34002}"
+host="${SAPPHIRE__SERVER__HOST:-0.0.0.0}"
+sqlport="${SAPPHIRE__SERVER__PORTS__SQL:-34000}"
+httpport="${SAPPHIRE__SERVER__PORTS__HTTP:-34001}"
+rpcport="${SAPPHIRE__SERVER__PORTS__RPC:-34002}"
 
 retries=30
 interval=1
