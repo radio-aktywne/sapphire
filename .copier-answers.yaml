@@ -1,17 +1,17 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: 0.4.0
+_commit: 0.5.0
 _src_path: gh:radio-aktywne/template-database-cockroach
 accountname: radio-aktywne
 databasename: datashows
-description: Emission shows database 🎭💾
+description: Broadcast shows data 🎭
 docs: true
-docsurl: https://radio-aktywne.github.io/database-datashows
+docsurl: https://radio-aktywne.github.io/datashows
 envprefix: DATASHOWS
 httpport: 34001
 imagename: databases/datashows
 registry: true
 releases: true
-reponame: database-datashows
-repourl: https://github.com/radio-aktywne/database-datashows
+reponame: datashows
+repourl: https://github.com/radio-aktywne/datashows
 rpcport: 34002
 sqlport: 34000
