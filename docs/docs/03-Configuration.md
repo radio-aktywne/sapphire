@@ -12,13 +12,13 @@ You can configure the database at runtime using various environment variables:
   (default: `0.0.0.0`)
 - `SAPPHIRE__SERVER__PORTS__SQL` -
   port to listen for SQL connections on
-  (default: `34000`)
+  (default: `10510`)
 - `SAPPHIRE__SERVER__PORTS__HTTP` -
   port to listen for HTTP connections on
-  (default: `34001`)
+  (default: `10511`)
 - `SAPPHIRE__SERVER__PORTS__RPC` -
   port to listen for RPC connections on
-  (default: `34002`)
+  (default: `10512`)
 - `SAPPHIRE__CREDENTIALS__ROOT__PASSWORD` -
   password for the root user
   (default: `password`)
