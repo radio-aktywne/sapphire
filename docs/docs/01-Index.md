@@ -3,11 +3,11 @@ slug: /
 title: Index
 ---
 
-# datashows database
+# datashows
 
-Emission shows database 🎭💾
+Broadcast shows data 🎭
 
 ## 💡 About
 
 `datashows` is a [`CockroachDB`](https://github.com/cockroachdb/cockroach) database
-that stores information about emission shows.
+that stores information about broadcast shows.

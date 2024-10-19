@@ -2,10 +2,10 @@ import type * as Preset from "@docusaurus/preset-classic";
 import type { Config } from "@docusaurus/types";
 import { themes } from "prism-react-renderer";
 
-const url = new URL("https://radio-aktywne.github.io/database-datashows");
+const url = new URL("https://radio-aktywne.github.io/datashows");
 
 const config: Config = {
-  title: "datashows database docs",
+  title: "datashows docs",
   favicon: "favicon.svg?v=1",
 
   url: `${url.protocol}//${url.host}`,
@@ -41,14 +41,14 @@ const config: Config = {
 
   themeConfig: {
     navbar: {
-      title: "datashows database docs",
+      title: "datashows docs",
       logo: {
-        alt: "datashows database docs logo",
+        alt: "datashows docs logo",
         src: "logo.svg?v=1",
       },
       items: [
         {
-          href: "https://github.com/radio-aktywne/database-datashows",
+          href: "https://github.com/radio-aktywne/datashows",
           position: "right",
           className: "header-github-link",
           "aria-label": "GitHub repository",
