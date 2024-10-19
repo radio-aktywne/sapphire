@@ -2,9 +2,9 @@
 
 # Configuration
 host="${SAPPHIRE__SERVER__HOST:-0.0.0.0}"
-sqlport="${SAPPHIRE__SERVER__PORTS__SQL:-34000}"
-httpport="${SAPPHIRE__SERVER__PORTS__HTTP:-34001}"
-rpcport="${SAPPHIRE__SERVER__PORTS__RPC:-34002}"
+sqlport="${SAPPHIRE__SERVER__PORTS__SQL:-10510}"
+httpport="${SAPPHIRE__SERVER__PORTS__HTTP:-10511}"
+rpcport="${SAPPHIRE__SERVER__PORTS__RPC:-10512}"
 
 retries=30
 interval=1

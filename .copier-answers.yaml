@@ -7,11 +7,11 @@ description: Broadcast shows data 🎭
 docs: true
 docsurl: https://radio-aktywne.github.io/sapphire
 envprefix: SAPPHIRE
-httpport: 34001
+httpport: 10511
 imagename: databases/sapphire
 registry: true
 releases: true
 reponame: sapphire
 repourl: https://github.com/radio-aktywne/sapphire
-rpcport: 34002
-sqlport: 34000
+rpcport: 10512
+sqlport: 10510
