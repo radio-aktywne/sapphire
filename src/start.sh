@@ -92,7 +92,7 @@ cockroachdb sql \
 
 echo 'Setup complete!'
 
-# Wait for Radicale to exit
+# Wait for CockroachDB to exit
 wait
 
 # Cleanup
