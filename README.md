@@ -15,7 +15,7 @@ Broadcast shows data 🎭
 
 ## 💡 About
 
-`sapphire` is a [`CockroachDB`](https://github.com/cockroachdb/cockroach) database
+`sapphire` is a [`PostgreSQL`](https://www.postgresql.org) database
 that stores information about broadcast shows.
 
 ## 📄 Further Reading

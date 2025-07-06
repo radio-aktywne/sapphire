@@ -1,17 +1,15 @@
 # Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
-_commit: 0.7.0
-_src_path: gh:radio-aktywne/template-database-cockroach
+_commit: 0.1.0
+_src_path: gh:radio-aktywne/template-database-postgres
 accountname: radio-aktywne
 databasename: sapphire
 description: Broadcast shows data 🎭
 docs: true
 docsurl: https://radio-aktywne.github.io/sapphire
 envprefix: SAPPHIRE
-httpport: 10511
 imagename: databases/sapphire
+port: 10510
 registry: true
 releases: true
 reponame: sapphire
 repourl: https://github.com/radio-aktywne/sapphire
-rpcport: 10512
-sqlport: 10510
