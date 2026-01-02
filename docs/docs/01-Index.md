@@ -5,7 +5,7 @@ title: Index
 
 # sapphire
 
-Broadcast shows data 🎭
+Broadcast shows database 🎭
 
 ## 💡 About
 

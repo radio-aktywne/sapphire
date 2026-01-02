@@ -2,7 +2,7 @@
 
 <div align="center">
 
-Broadcast shows data 🎭
+Broadcast shows database 🎭
 
 [![Lint](https://github.com/radio-aktywne/sapphire/actions/workflows/lint.yaml/badge.svg)](https://github.com/radio-aktywne/sapphire/actions/workflows/lint.yaml)
 [![Image](https://github.com/radio-aktywne/sapphire/actions/workflows/image.yaml/badge.svg)](https://github.com/radio-aktywne/sapphire/actions/workflows/image.yaml)

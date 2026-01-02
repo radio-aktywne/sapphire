@@ -4,9 +4,9 @@ services:
       context: ./
       network: host
     environment:
+      - "SAPPHIRE__CREDENTIALS__USER__PASSWORD=${SAPPHIRE__CREDENTIALS__USER__PASSWORD:-password}"
       - "SAPPHIRE__SERVER__HOST=${SAPPHIRE__SERVER__HOST:-0.0.0.0}"
       - "SAPPHIRE__SERVER__PORT=${SAPPHIRE__SERVER__PORT:-10510}"
-      - "SAPPHIRE__CREDENTIALS__USER__PASSWORD=${SAPPHIRE__CREDENTIALS__USER__PASSWORD:-password}"
     network_mode: host
     volumes:
       - data:/database/data/
